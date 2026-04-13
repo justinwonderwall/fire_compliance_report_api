@@ -7,6 +7,8 @@ services:
     startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /healthz
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.7
       - key: OPENAI_MODEL
         value: gpt-5.4-mini
       - key: OPENAI_TIMEOUT_SECONDS
